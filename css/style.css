@@ -1,0 +1,308 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Header */
+.top-header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: top 0.3s ease-out;
+}
+.h-container{
+    margin-left: 10px;
+}
+.pup-name{
+    text-align: left;
+    color: #850000;
+    font-size: 24px;
+    font-family: Tiro Devanagari Hindi;
+    font-weight: 400;
+    word-wrap: break-word;
+    width: 100%; 
+ 
+}
+
+.auth-buttons button {
+    position: absolute;
+    top: 20px;                    /* Distance from the top */
+                /* Distance from the right */
+    gap: 15px;
+    display: flex;
+    cursor: pointer;
+    
+}
+
+/* Button 1 (Login) Styling */
+.btn-1 {
+    right:20px;
+    padding-left: 24px; 
+    padding-right: 24px; 
+    padding-top: 8px; 
+    padding-bottom: 8px; 
+    background: #F2F2F7; 
+    border-radius: 100px; 
+    border: 2px #850000 solid; 
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+    color: #850000;             /* Font color */
+    font-size: 14px;            /* Font size */
+    font-family: sans-serif;     /* Font family */
+    font-weight: 700;           /* Font weight */
+    text-align: center;         /* Align text in the center */
+    cursor: pointer;            /* Cursor changes to pointer */
+}
+.btn-1:hover {
+    background-color: #FFCC00;
+    border: 2px #850000 solid;
+}
+
+/* Button 2 (Sign Up) Styling */
+.btn-2 {
+    right: 120px;
+    padding-left: 24px; 
+    padding-right: 24px; 
+    padding-top: 8px; 
+    padding-bottom: 8px; 
+    background-color: #FFCC00; 
+    border-radius: 100px; 
+    border: 1px #FFCC00 solid; 
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+    color: #850000;             /* Font color */
+    font-size: 14px;            /* Font size */
+    font-family: sans-serif;     /* Font family */
+    font-weight: 700;           /* Font weight */
+    text-align: center;         /* Align text in the center */
+    cursor: pointer;            /* Cursor changes to pointer */
+}
+.btn-2:hover {
+    background-color: white;
+    border: 2px #850000 solid;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+    transition: all 0.3s ease;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 90px;
+    height: auto;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.logo-text{
+    color: white;
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 800;
+    white-space: nowrap; /* prevent text from wrapping*/
+
+
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+    gap: 25px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0; /* Add padding for spacing */
+    position: relative; /* For underline effect */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect with underline */
+.navbar ul li a:hover {
+    background-color: rgb(92, 41, 53); /* Background color on hover */
+    color: white;
+}
+
+/* Underline effect */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+/* Expand underline on hover */
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown menu */
+ul li ul.dropdown {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    position: absolute;
+    top: 100%;
+   
+  
+    padding: 20px;
+    z-index: 999;
+    display: none;
+    border-radius: 5px; /* Add rounded corners for better look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Dropdown items styling */
+ul li ul.dropdown li {
+    margin: 0;
+    padding: 0px;
+    width: 200px;
+}
+
+ul li ul.dropdown li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on dropdown items */
+ul li ul.dropdown li a:hover {
+    background-color: rgb(92, 41, 53); /* Match hover color with main links */
+}
+
+/* Show dropdown on hover */
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* Active link styling (emphasized color when clicked) */
+.navbar ul li a.active {
+    background-color: rgb(92, 41, 53); /* Background color for active link */
+    color: yellow; /* Emphasized text color */
+    font-weight: bold; /* Make the active link bold */
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    min-height: 200vh;
+}
+
+
+.content{
+    padding: 0;
+    /* Adjust margin to prevent content from hiding behind the fixed navbar */
+     /* Extra height to allow scrolling */
+  
+}
+
+.search-border{
+    width: 100%; 
+    height: 150%; 
+    background: rgba(255, 246, 195, 0.74);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    
+}
+.search-container {
+    
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#search-input {
+    width: 800px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid#850000;
+    border-radius: 20px;
+    align-items: center;
+}
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color:#850000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #850000;
+}
+.overview-con {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    width: 100%;
+    height: 50vh; /* Adjusted to vh for better responsiveness */
+    background: #5c0303;
+   
+ 
+}
+.overview-title{
+    color: #E8E6E6;
+    font-size: 40px;
+    font-family: Timmana;
+    font-weight: 400;
+    word-wrap: break-word;
+    align-items: center;
+    margin-right: 900px;
+    padding-top: 90px;
+
+}
+.overview-p {
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: justify;
+    align-items: center;
+    padding: 70px;
+    padding-top: 20px;
+}
